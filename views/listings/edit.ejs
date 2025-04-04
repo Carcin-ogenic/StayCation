@@ -1,0 +1,118 @@
+<% layout('/layouts/boilerplate.ejs') -%>
+<body>
+  <h3 class="my-3">Edit your Listing</h3>
+  <form
+    method="POST"
+    action="/listings/<%= property._id %>?_method=PUT"
+    enctype="multipart/form-data"
+    novalidate
+    class="needs-validation w-75"
+    id="edit-form"
+  >
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input
+        name="listing[title]"
+        id="title"
+        placeholder="Enter Title"
+        value="<%=property.title%>"
+        type="text"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="valid-feedback">Looks Good!</div>
+    <div class="invalid-feedback">Enter a valid Title</div>
+    <div class="mb-3">
+      <label for="Description" class="form-label">Description</label>
+      <textarea
+        name="listing[description]"
+        id="Description"
+        placeholder="Enter Description"
+        class="form-control"
+        rows="2"
+        required
+      >
+<%= property.description %></textarea
+      >
+      <div class="invalid-feedback">Enter a valid Description</div>
+    </div>
+
+    <!-- <div class="mb-3">
+      <label for="Image" class="form-label">Image URL</label>
+      <input
+        name="listing[image][url]"
+        id="Image"
+        placeholder="Enter Image URL/Link"
+        type="text"
+        class="form-control"
+        value="<%=property.image.url%>"
+        required
+      />
+      <div class="invalid-feedback">Enter a valid Image URL</div>
+    </div> -->
+    <div class="mb-3">
+      <p>Original Listing Image</p>
+      <img
+        src="<%= originalImageUrl %>"
+        style="width: auto; height: 250px"
+        class="img-fluid object-fit-contain rounded"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="Image" class="form-label">Upload Listing Image</label>
+      <input name="listing[image]" id="Image" type="file" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+      <label for="Price" class="form-label">Price</label>
+      <input
+        name="listing[price]"
+        placeholder="Enter Price"
+        type="number"
+        class="form-control"
+        id="Price"
+        value="<%=property.price%>"
+        required
+      />
+      <div class="invalid-feedback">Enter a valid Price</div>
+    </div>
+    <div class="mb-3">
+      <label for="Location" class="form-label">Location</label>
+      <input
+        name="listing[location]"
+        placeholder="Enter Location"
+        type="text"
+        class="form-control"
+        id="Location"
+        value="<%=property.location%>"
+        required
+      />
+      <div class="valid-feedback">Enter a valid Location</div>
+    </div>
+    <div class="mb-3">
+      <label for="Country" class="form-label">Country</label>
+      <input
+        name="listing[country]"
+        placeholder="Enter Country"
+        type="text"
+        class="form-control"
+        id="Country"
+        value="<%=property.country%>"
+        required
+      />
+      <div class="invalid-feedback">Enter a valid Location</div>
+    </div>
+    <button type="submit" class="w-25 mb-3 btn btn-dark add-btn">
+      Edit&nbsp;
+      <span class="spinner-border spinner-border-sm d-none" id="btnSpinner" role="status" aria-hidden="true"></span>
+    </button>
+  </form>
+  <script>
+    document.getElementById("edit-form").addEventListener("submit", function () {
+      const btn = this.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.querySelector("#btnSpinner").classList.remove("d-none");
+    });
+  </script>
+</body>

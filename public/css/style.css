@@ -1,0 +1,144 @@
+body {
+  font-family: "Plus Jakarta Sans", serif !important;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* overscroll-behavior: none; */
+}
+
+.container {
+  flex: 1;
+}
+
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+.smallNavbar {
+  background-color: white;
+  /* margin-bottom: 10rem !important; */
+}
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  color: #222222 !important;
+}
+
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+.f-info-socials {
+  font-size: 1.2rem;
+  display: flex;
+  gap: 1rem;
+}
+.f-info {
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+}
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-text {
+  font-weight: 400 !important;
+}
+.listing-link {
+  text-decoration: none;
+}
+.card-img-overlay {
+  opacity: 0;
+}
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: white;
+}
+
+.add-btn {
+  background-color: #fe424d !important;
+  border: none !important;
+}
+.show-img {
+  height: 50vh;
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.star {
+  font-size: large;
+  background-color: #ccc;
+  border-radius: 4px;
+}
+@media (min-width: 768px) {
+  .w-md-70 {
+    width: 70% !important;
+  }
+  .w-md-50 {
+    width: 50% !important;
+  }
+  .reviews-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.star-rating {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  font-size: 3rem;
+  justify-content: center;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: gold;
+}
+
+.star-rating input:checked ~ label {
+  color: gold;
+}
+
+/* MAP */
+#map {
+  height: 400px;
+  width: auto;
+  border-radius: 8px;
+}
