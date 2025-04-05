@@ -9,12 +9,14 @@ StayCation is a modern web application designed to provide users with an immersi
 - **Responsive Design:** Built with Bootstrap ensuring the application looks great on devices of all sizes.
 - Server-side templating with EJS for a robust rendering process.
 - Clean and maintainable code using JavaScript, EJS, and CSS.
+- **Deployment Ready:** Deployed on Render with a custom domain ([staycation.rohitarora.tech](https://staycation.rohitarora.tech/)) and automated build processes.
 
 ## Technologies Used
 
-- **JavaScript:** Core scripting language powering the client-side interactions.
-- **EJS:** Templating engine for generating dynamic HTML on the server.
-- **CSS:** Styling the application for a polished and responsive look.
-- **Mapbox:** Providing dynamic and interactive maps.
-- **Cloudinary:** Handling all image-related operations including uploads and transformations.
-- **Bootstrap:** Ensuring a responsive and grid-based layout design.
+- **Backend:** Node.js, Express, EJS
+- **Frontend:** Bootstrap, EJS templates
+- **Mapping:** Mapbox
+- **Media Storage:** Cloudinary
+- **Database:** MongoDB Atlas
+- **Deployment:** Render
+- **Version Control:** Git & GitHub
